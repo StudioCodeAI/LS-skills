@@ -27,6 +27,7 @@ Quando precisar realizar uma tarefa e quiser saber se existe uma skill dedicada:
 | **Testes E2E e QA** | `catalogs/automation.json` | Automação de browser, Playwright, Cypress, acessibilidade. |
 | **Desenvolvimento** | `catalogs/development.json` | Design patterns, refactoring, hooks, APIs. |
 | **Data & AI** | `catalogs/data-ai.json` | Prompts avançados, RAG, integração de LLMs. |
+| **Infra de IA (Gateway)** | `catalogs/omnirouter.json` | Roteamento multi-provider, A2A, MCP, combos, compressão, resiliência — 45 skills auto-geradas do OmniRouter (`gateway local`, porta 20128). |
 
 ---
 *Assinatura de Autonomia: Lya Studio CodeAI - Indexador Ativo.*

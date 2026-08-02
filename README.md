@@ -30,6 +30,7 @@ Projetado para operar em **Modo ADM-ECO**, este repositório utiliza a arquitetu
 | **Marketing** | `catalogs/seo.json` | Agentic SEO, Core Web Vitals, Schema. |
 | **QA** | `catalogs/automation.json` | Playwright, Automação E2E. |
 | **Engenharia** | `catalogs/development.json` | Padrões de arquitetura, Hooks. |
+| **Infra de IA (Gateway)** | `catalogs/omnirouter.json` | Roteamento multi-provider, A2A, MCP, combos, compressão, resiliência (OmniRouter). |
 
 ## ⚙️ Automação e CLI (Ingestão de Skills)
 

@@ -1,0 +1,495 @@
+{
+  "name": "OmniRouter AI Gateway Catalog",
+  "description": "Skills auto-geradas do proprio codigo-fonte do OmniRouter (gateway de IA local, 36+ providers) cobrindo API REST, CLI e config - inclui A2A, MCP, compressao, resiliencia, combos/roteamento. Doc oficial: github.com/diegosouzapw/OmniRoute",
+  "skills": [
+    {
+      "id": "omni-auth",
+      "tags": [
+        "omnirouter",
+        "api",
+        "auth",
+        "authentication"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-auth/SKILL.md",
+      "description": "Manage API key authentication and session tokens. Start here to authenticate requests via Bearer token, obtain session cookies, and configure login requirements for the OmniRoute API."
+    },
+    {
+      "id": "omni-providers",
+      "tags": [
+        "omnirouter",
+        "api",
+        "providers"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-providers/SKILL.md",
+      "description": "Manage provider connections, API keys, OAuth flows, and connection tests via the REST API. List, add, update, remove, and test AI provider integrations (OpenAI, Anthropic, Gemini, and 160+)."
+    },
+    {
+      "id": "omni-models",
+      "tags": [
+        "omnirouter",
+        "api",
+        "models"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-models/SKILL.md",
+      "description": "Query available AI models across all configured providers. List models, resolve model aliases, and browse the full model catalog including provider-specific variants."
+    },
+    {
+      "id": "omni-combos-routing",
+      "tags": [
+        "omnirouter",
+        "api",
+        "combos",
+        "routing"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-combos-routing/SKILL.md",
+      "description": "Create and manage routing combos with 14 strategies (priority, weighted, round-robin, Auto-combo, etc.). Configure fallback chains, test routing outcomes, and retrieve combo metrics."
+    },
+    {
+      "id": "omni-api-keys",
+      "tags": [
+        "omnirouter",
+        "api",
+        "keys"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-api-keys/SKILL.md",
+      "description": "Create, list, rotate, and revoke OmniRoute API keys. Control per-key scopes, spending limits, and expiration. Keys gate access to all proxy and management endpoints."
+    },
+    {
+      "id": "omni-usage-logs",
+      "tags": [
+        "omnirouter",
+        "api",
+        "usage",
+        "logs"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-usage-logs/SKILL.md",
+      "description": "Access detailed call logs and usage analytics. Filter by provider, model, time range, status, and cost. Export logs and aggregate token usage across all connections."
+    },
+    {
+      "id": "omni-budget",
+      "tags": [
+        "omnirouter",
+        "api",
+        "budget",
+        "rate",
+        "limits"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-budget/SKILL.md",
+      "description": "Configure spending limits, token quotas, and rate-limit policies per API key or globally. Inspect current consumption and enforce cost controls across providers."
+    },
+    {
+      "id": "omni-settings",
+      "tags": [
+        "omnirouter",
+        "api",
+        "settings"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-settings/SKILL.md",
+      "description": "Read and update global application settings: system prompts, thinking budget, IP filters, payload rules, combo defaults, and require-login configuration."
+    },
+    {
+      "id": "omni-proxies",
+      "tags": [
+        "omnirouter",
+        "api",
+        "proxies",
+        "proxy",
+        "configuration"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-proxies/SKILL.md",
+      "description": "Configure HTTP/HTTPS/SOCKS proxies for upstream provider requests. Set per-provider or global proxy rules, test connectivity, and manage proxy rotation."
+    },
+    {
+      "id": "omni-cache",
+      "tags": [
+        "omnirouter",
+        "api",
+        "cache"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-cache/SKILL.md",
+      "description": "Manage the LLM response cache. View cache statistics, clear entries, configure TTL policies, and control semantic-similarity caching thresholds."
+    },
+    {
+      "id": "omni-compression",
+      "tags": [
+        "omnirouter",
+        "api",
+        "compression"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-compression/SKILL.md",
+      "description": "Configure RTK (command output), Caveman (prose), and stacked compression modes. Manage language packs, custom rules, and test prompt compression reducing tokens by 60–90%."
+    },
+    {
+      "id": "omni-context-rtk",
+      "tags": [
+        "omnirouter",
+        "api",
+        "context",
+        "rtk"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-context-rtk/SKILL.md",
+      "description": "Configure RTK filters, context engineering rules, and context relay settings. Test compression with real prompt samples and manage context transformation pipelines."
+    },
+    {
+      "id": "omni-resilience",
+      "tags": [
+        "omnirouter",
+        "api",
+        "resilience",
+        "monitoring"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-resilience/SKILL.md",
+      "description": "Monitor provider health, circuit-breaker states, p50/p95/p99 latency metrics, and budget guard alerts. Inspect connection cooldowns and model lockouts in real time."
+    },
+    {
+      "id": "omni-cli-tools",
+      "tags": [
+        "omnirouter",
+        "api",
+        "cli",
+        "tools"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-cli-tools/SKILL.md",
+      "description": "Manage CLI tool integrations exposed via the API. List, configure, and invoke CLI tool plugins that extend OmniRoute's automation surface."
+    },
+    {
+      "id": "omni-tunnels",
+      "tags": [
+        "omnirouter",
+        "api",
+        "tunnels"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-tunnels/SKILL.md",
+      "description": "Create and manage secure tunnels (ngrok, Cloudflare Tunnel, custom) to expose OmniRoute to the internet or share access with remote agents and CI pipelines."
+    },
+    {
+      "id": "omni-sync-cloud",
+      "tags": [
+        "omnirouter",
+        "api",
+        "sync",
+        "cloud"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-sync-cloud/SKILL.md",
+      "description": "Synchronise OmniRoute configuration, provider connections, and settings to/from cloud storage. Manage cloud worker authentication and remote backup targets."
+    },
+    {
+      "id": "omni-db-backups",
+      "tags": [
+        "omnirouter",
+        "api",
+        "backups",
+        "database"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-db-backups/SKILL.md",
+      "description": "Trigger system backups, restore from backup files, and manage the SQLite database lifecycle. Supports export, import, and incremental snapshot strategies."
+    },
+    {
+      "id": "omni-webhooks",
+      "tags": [
+        "omnirouter",
+        "api",
+        "webhooks"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-webhooks/SKILL.md",
+      "description": "Register, list, test, and remove webhook endpoints. Configure event subscriptions (request.completed, provider.error, budget.exceeded, etc.) and manage delivery retries."
+    },
+    {
+      "id": "omni-mcp",
+      "tags": [
+        "omnirouter",
+        "api",
+        "mcp",
+        "server"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-mcp/SKILL.md",
+      "description": "Connect to the OmniRoute MCP server (37 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 16 permission scopes."
+    },
+    {
+      "id": "omni-agents-a2a",
+      "tags": [
+        "omnirouter",
+        "api",
+        "agents",
+        "a2a",
+        "protocol"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-agents-a2a/SKILL.md",
+      "description": "Interact with OmniRoute via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities."
+    },
+    {
+      "id": "omni-version-manager",
+      "tags": [
+        "omnirouter",
+        "api",
+        "version",
+        "manager"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-version-manager/SKILL.md",
+      "description": "Install, start, stop, restart, and update embedded services (9Router, CLIProxyAPI). Monitor service status, retrieve logs, and configure auto-start for local-only service endpoints."
+    },
+    {
+      "id": "omni-inference",
+      "tags": [
+        "omnirouter",
+        "api",
+        "inference",
+        "openai",
+        "compatible"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-inference/SKILL.md",
+      "description": "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, and the Responses API. The primary integration surface for AI agents."
+    },
+    {
+      "id": "cli-serve",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "serve"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-serve/SKILL.md",
+      "description": "Start, stop, and restart the OmniRoute server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut."
+    },
+    {
+      "id": "cli-health",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "health"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-health/SKILL.md",
+      "description": "Check server health, component status, and live metrics from the CLI. Run `health`, `health components`, and `health watch` for a real-time dashboard of circuit breakers and provider status."
+    },
+    {
+      "id": "cli-providers",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "providers"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-providers/SKILL.md",
+      "description": "Manage provider connections from the CLI: list available/configured providers, add, test, test-all, validate, rotate API keys, and view per-provider metrics."
+    },
+    {
+      "id": "cli-keys",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "keys",
+        "api"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-keys/SKILL.md",
+      "description": "Create, list, rotate, and revoke OmniRoute API keys from the CLI. Manage OAuth flows for provider authentication and inspect key scopes and expiration."
+    },
+    {
+      "id": "cli-models",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "models"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-models/SKILL.md",
+      "description": "Query available AI models, list model aliases, and browse the full model catalog from the CLI. Filter by provider, search by capability, and resolve model name variants."
+    },
+    {
+      "id": "cli-chat",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "chat"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-chat/SKILL.md",
+      "description": "Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all OmniRoute providers, combo routing, and system prompt configuration."
+    },
+    {
+      "id": "cli-routing",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "routing",
+        "combos"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-routing/SKILL.md",
+      "description": "Create, list, update, and delete routing combos from the CLI. Test routing strategies, inspect combo metrics, and configure fallback chains interactively."
+    },
+    {
+      "id": "cli-resilience",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "resilience",
+        "quotas"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-resilience/SKILL.md",
+      "description": "Inspect and manage circuit-breaker states, connection cooldowns, quota limits, and backoff levels from the CLI. Reset stuck providers and configure resilience thresholds."
+    },
+    {
+      "id": "cli-compression",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "compression"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-compression/SKILL.md",
+      "description": "Configure and test prompt compression from the CLI. Manage RTK filters, Caveman rules, stacked compression modes, and preview compression output with real prompts."
+    },
+    {
+      "id": "cli-contexts",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "contexts",
+        "sessions"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-contexts/SKILL.md",
+      "description": "Manage context engineering configurations, RTK filter sets, and conversation sessions from the CLI. Apply context-relay settings and inspect active context pipelines."
+    },
+    {
+      "id": "cli-cost-usage",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "cost",
+        "usage"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-cost-usage/SKILL.md",
+      "description": "View cost breakdowns, token usage, and call logs from the CLI. Filter by provider, model, or date range. Export usage reports and inspect per-connection spending."
+    },
+    {
+      "id": "cli-mcp",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "mcp"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-mcp/SKILL.md",
+      "description": "Inspect the MCP server status, list registered tools and scopes, run tool invocations, and manage MCP audit logs from the CLI."
+    },
+    {
+      "id": "cli-a2a",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "a2a",
+        "protocol"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-a2a/SKILL.md",
+      "description": "Interact with the OmniRoute A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively."
+    },
+    {
+      "id": "cli-tunnel",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "tunnel",
+        "tunnels"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-tunnel/SKILL.md",
+      "description": "Start and stop tunnel connections (ngrok, Cloudflare, custom) from the CLI. Inspect active tunnel URLs, configure authentication, and test external reachability."
+    },
+    {
+      "id": "cli-backup-sync",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "backup",
+        "sync"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-backup-sync/SKILL.md",
+      "description": "Backup and restore OmniRoute data from the CLI. Trigger incremental snapshots, sync to cloud storage, manage backup schedules, and restore from archive files."
+    },
+    {
+      "id": "cli-policy-audit",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "policy",
+        "audit"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-policy-audit/SKILL.md",
+      "description": "Inspect audit logs, manage access policies, view telemetry data, and review request history from the CLI. Filter by event type, user, or time range for compliance workflows."
+    },
+    {
+      "id": "cli-batches",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "batches",
+        "files"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-batches/SKILL.md",
+      "description": "Submit and monitor batch inference jobs from the CLI. Upload and manage files for batch processing, retrieve results, and integrate batch pipelines with CI/CD workflows."
+    },
+    {
+      "id": "cli-eval",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "eval",
+        "evals"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-eval/SKILL.md",
+      "description": "Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI."
+    },
+    {
+      "id": "cli-plugins-skills",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "plugins",
+        "skills",
+        "memory"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-plugins-skills/SKILL.md",
+      "description": "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI."
+    },
+    {
+      "id": "cli-setup",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "setup",
+        "config"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-setup/SKILL.md",
+      "description": "Run initial setup, configure global CLI settings, manage environment variables, check for updates, and configure autostart via the CLI setup and config commands."
+    },
+    {
+      "id": "cli-skill-collector",
+      "tags": [
+        "omnirouter",
+        "cli",
+        "setup",
+        "agent",
+        "skill",
+        "collector"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/cli-skill-collector/SKILL.md",
+      "description": "Detect installed CLI coding tools (Claude Code, Codex, Cursor, Copilot, Cline and more), search GitHub for matching agent skills, and install them to the detected tools via OmniRoute's built-in APIs."
+    },
+    {
+      "id": "config-codex-cli",
+      "tags": [
+        "omnirouter",
+        "config",
+        "codex",
+        "cli"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/config-codex-cli/SKILL.md",
+      "description": "Step-by-step agent workflow to configure the OpenAI Codex CLI on any machine (Linux, macOS, Windows) to use OmniRoute as an OpenAI-compatible backend. Detects OS and shell, writes config.toml and 7 named profiles, sets environment variables, and verifies the setup."
+    },
+    {
+      "id": "omni-github-skills",
+      "tags": [
+        "omnirouter",
+        "api",
+        "github",
+        "skills",
+        "skill",
+        "discovery"
+      ],
+      "source_url": "https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills/omni-github-skills/SKILL.md",
+      "description": "Search, score, scan, and import agent skills from GitHub repositories that contain SKILL.md, CLAUDE.md, .cursorrules, and similar agent skill files. Discover community skills across 160+ provider categories, evaluate relevance with heuristic scoring, check for malware or hardcoded secrets, and install into Hermes, Claude Code, Gemini CLI, or OpenCode agent directories."
+    }
+  ]
+}
