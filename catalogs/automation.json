@@ -1,0 +1,13 @@
+{
+  "name": "Automation & QA Catalog",
+  "description": "Skills para testes e automação (E2E, API, Visual)",
+  "skills": [
+    {
+      "id": "playwright-patterns",
+      "tags": ["playwright", "testes e2e", "qa", "automação", "cypress migration"],
+      "source_url": "https://raw.githubusercontent.com/testdino-hq/playwright-skill/main/SKILL.md",
+      "core5_id": "mem_6549af04",
+      "description": "Padrões battle-tested de Playwright"
+    }
+  ]
+}

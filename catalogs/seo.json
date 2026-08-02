@@ -1,0 +1,13 @@
+{
+  "name": "SEO Catalog",
+  "description": "Skills focadas em SEO, Analytics e Performance Web",
+  "skills": [
+    {
+      "id": "seo-master",
+      "tags": ["seo", "audit", "core web vitals", "schema", "hreflang", "e-e-a-t"],
+      "source_url": "https://raw.githubusercontent.com/Bhanunamikaze/Agentic-SEO-Skill/main/SKILL.md",
+      "core5_id": "mem_fb6f28aa",
+      "description": "SEO audit completo (16 sub-skills)"
+    }
+  ]
+}
