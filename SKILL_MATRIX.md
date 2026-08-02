@@ -22,7 +22,7 @@ Quando precisar realizar uma tarefa e quiser saber se existe uma skill dedicada:
 
 | Domínio | Caminho do Catálogo | Descrição / Gatilhos |
 |---------|---------------------|----------------------|
-| **Core** | `core/` (diretório local) | Modos de operação principais de Lya (Modo ADM, Modo ECO). |
+| **Core** | `core/` (diretório local) | Modos de operação principais de Lya (Modo ADM, Modo ECO, Metodologia CURE). |
 | **SEO & Marketing** | `catalogs/seo.json` | SEO técnico, Core Web Vitals, Schema, E-E-A-T, SEO de repositórios. |
 | **Testes E2E e QA** | `catalogs/automation.json` | Automação de browser, Playwright, Cypress, acessibilidade. |
 | **Desenvolvimento** | `catalogs/development.json` | Design patterns, refactoring, hooks, APIs. |
