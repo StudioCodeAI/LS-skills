@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StudioCodeAI/Lya-Studio-Coder/main/assets/lya-icon.png" alt="LS-Skills Logo" width="120" />
+  <img src="assets/banner.png" alt="LS-Skills Banner" width="800" />
   <h1>LS-Skills 🧠</h1>
   <p><strong>Roteador Matriz Semântico & Repositório de Habilidades da Studio CodeAI</strong></p>
 
