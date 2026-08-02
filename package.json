@@ -1,0 +1,15 @@
+{
+  "name": "ls-skills",
+  "version": "1.0.0",
+  "description": "LS-Skills Matrix Router",
+  "main": "index.js",
+  "scripts": {
+    "test": "node scripts/validate_catalogs.js",
+    "ingest": "node scripts/skill_indexer.js"
+  },
+  "keywords": ["skills", "agent", "studio-codeai"],
+  "author": "Lya Studio CodeAI",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
