@@ -40,6 +40,14 @@ Qualquer uma destas frases, isolada ou no início da mensagem, ativa este modo:
    isso é o parâmetro `model` da tool `Agent`; fora dele, delegue a
    subagentes locais equivalentes (`agy`/Antigravity, MiMo — ver
    [mimo-orchestration](mimo-orchestration.md)).
+6. **Segredos Expostos**: ao encontrar uma API key/token/senha em texto puro
+   em disco — **em projeto nosso** (Arquiteto/Studio CodeAI, código que
+   controlamos): excluir o arquivo/a key e avisar, não só sinalizar.
+   **Em projeto de terceiro** (dependência, repo clonado que não é nosso):
+   só avisar o Arquiteto Luis Antonio Cardozo, nunca excluir/modificar.
+   Em ambos os casos, lembrar que apagar o arquivo local não invalida a key
+   em si se ela já apareceu em algum output/transcript — rotação no
+   provedor é recomendação à parte.
 
 ---
 
