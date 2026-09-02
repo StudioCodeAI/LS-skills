@@ -1,0 +1,38 @@
+﻿{
+  "name": "Development Catalog",
+  "description": "Skills de engenharia: padroes de arquitetura, hooks, ferramentas de coding agent",
+  "skills": [
+    {
+      "id": "antigravity-for-claude-code",
+      "tags": [
+        "claude code",
+        "plugin",
+        "antigravity",
+        "agy",
+        "gemini",
+        "hybrid routing",
+        "cost optimization",
+        "delegation",
+        "sdlc"
+      ],
+      "source_url": "https://raw.githubusercontent.com/yuting0624/antigravity-for-claude-code/master/skills/antigravity/SKILL.md",
+      "core5_id": "mem_92748dd1",
+      "description": "Roda o Antigravity CLI (Gemini) como segundo agente dentro do Claude Code, com roteamento inteligente de modelo pelo SDLC — Claude julga/verifica, Antigravity executa volume (scaffolding, testes, migrations). Reducao medida de custo: 27-64%."
+    },
+    {
+      "id": "mimo-orchestration",
+      "tags": [
+        "mimo",
+        "xiaomi",
+        "llm",
+        "multi-agent",
+        "orchestration",
+        "sub-agent",
+        "delegation",
+        "fast-coding"
+      ],
+      "source_path": "core/mimo-orchestration.md",
+      "description": "Orquestra o Xiaomi MiMo (drdelco.mimo-provider via token-plan-sgp.xiaomimimo.com/v1) como agente auxiliar para tarefas em lote, geracao de volume, testes e execucao paralela."
+    }
+  ]
+}
