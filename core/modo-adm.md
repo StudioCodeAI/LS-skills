@@ -213,36 +213,45 @@ em princípio:
 - **Combinados**: +39% de desempenho em tarefas complexas multi-step;
   Context Editing sozinho já entrega +29%.
 
-## 🌿 Headroom — implementação de referência (a "cereja do bolo")
+## 🌿 Headroom-Inspired Self-Compression (nativo, sem proxy) — "bloco ECO"
 
-[headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom) é o
-projeto que mais concretamente junta tudo acima numa ferramenta só — vale
-como referência de arquitetura mesmo sem instalar:
+**Decisão (2026-09-02):** avaliamos instalar o
+[headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom) como
+proxy local (`headroom wrap claude` / `headroom deploy`) e descartamos. Um
+proxy de terceiro — mesmo local, mesmo open-source — é um intermediário no
+tráfego da API que o Arquiteto não controla diretamente. **Nenhum serviço
+externo roteia ou intercepta chamadas de API neste projeto.** As técnicas
+abaixo são as mesmas ideias do Headroom, mas aplicadas por Lya diretamente,
+dentro do próprio raciocínio — controle 100% do Arquiteto/Lya, zero
+intermediário observando o tráfego. É esse bloco que o Arquiteto chama de
+**"bloco ECO"**: prática, não pacote instalado.
 
-- **Live-Zone Compression**: só os bytes novos (output fresco de ferramenta,
-  turno mais recente) são comprimidos — o **prefixo congelado fica idêntico
-  byte a byte**, então o cache do provedor sobrevive. É a mesma ideia da
-  Regra de Ouro do Prompt Caching acima, só que automatizada.
-- **Cache Aligner**: detecta conteúdo volátil que quebraria o cache
-  KV-prefix e nunca reescreve o prompt — só sinaliza.
-- **CCR (Reversible Compression)**: original fica em cache local; o modelo
-  busca o texto completo sob demanda (`headroom_retrieve`) só quando
-  precisa — mesmo princípio de Just-In-Time Retrieval / Progressive
-  Disclosure já nos Três Trilhos, aqui como mecanismo concreto.
-- **ContentRouter**: detecta tipo de conteúdo (JSON, código AST-aware em
-  7 linguagens, prosa) e aplica o compressor certo pra cada um —
-  88% de redução medida em JSON/logs, 57% em debugging SRE.
-- **Verbosity/effort steering**: adiciona instrução de terseness ao fim do
-  system prompt (sem quebrar o cache do prefixo) e reduz esforço de
-  raciocínio em turnos de retomada — esforço total continua em perguntas
-  novas e erros.
-- **`headroom learn`**: minera sessões que falharam e grava correções em
-  arquivo local (`CLAUDE.local.md`, gitignored) — mesmo espírito do CURE
-  SCAR do Core5 (registrar o erro uma vez, não repetir).
+- **Triagem por tipo de conteúdo** (equivalente ao ContentRouter): antes de
+  citar/resumir uma saída de ferramenta grande, identificar se é JSON/array
+  repetitivo, código, log ou prosa — e aplicar a tática certa abaixo em vez
+  de tratar tudo igual.
+- **Compressão seletiva de JSON/arrays** (equivalente ao SmartCrusher): em
+  listas grandes e repetitivas, manter itens de erro, valores fora do padrão
+  estatístico e primeiro/último item — resumir o miolo repetitivo numa
+  linha (`+42 itens similares, todos status=ok`) em vez de citar tudo.
+- **Referência recuperável, não texto reincorporado** (equivalente ao CCR):
+  ao resumir algo extenso na resposta, guardar a referência de recuperação
+  (caminho + linha, comando exato, ID) em vez de reincorporar o texto
+  inteiro — reler sob demanda se for realmente preciso de novo.
+- **Prefixo congelado** (equivalente a Cache Aligner / Live-Zone
+  Compression): já coberto pela Regra de Ouro do Prompt Caching acima — só a
+  ponta nova do contexto muda, o resto fica intocado.
+- **Terseness e esforço proporcional** (equivalente a verbosity/effort
+  steering): já coberto pelo [modo-eco](modo-eco.md) — resposta enxuta por
+  padrão, esforço de raciocínio raso em turnos de retomada de rotina
+  (leitura de arquivo, teste que passou) e fundo em erro/pergunta nova.
+- **Erro registrado uma vez** (equivalente a `headroom learn`): mesmo
+  espírito do CURE SCAR do Core5 — gravar erro→correção na memória do
+  projeto, não repetir a mesma investigação em sessões futuras.
 
-Disponível como lib Python/TS, proxy local, wrapper de agente
-(`headroom wrap claude`) ou servidor MCP — avaliar/instalar fica a critério
-do Arquiteto, não é automático (mesma regra da seção de Fontes abaixo).
+Fica como referência de arquitetura para inspirar técnica, não como
+dependência a instalar — reavaliar essa decisão exige autorização explícita
+do Arquiteto, mesma regra da seção de Fontes abaixo.
 
 ## 📚 Fontes
 
