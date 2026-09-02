@@ -125,7 +125,11 @@ sessões curtas:
 
    Essa linha é o mecanismo real de continuidade entre sessões — memória de
    longo prazo entre janelas de contexto ou máquinas diferentes não é
-   garantida; o texto colado É a continuidade.
+   garantida; o texto colado É a continuidade. **Onde a plataforma suportar
+   Artifact** (Claude Code): publicar um pequeno artifact com botão
+   "Copiar" contendo exatamente esse texto — clique, cola, começa. Texto
+   puro no chat continua sendo o mínimo aceitável quando não há Artifact
+   disponível.
 
 ---
 
